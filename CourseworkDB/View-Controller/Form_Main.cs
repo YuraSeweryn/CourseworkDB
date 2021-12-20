@@ -75,6 +75,7 @@ namespace CourseworkDB
             }
         }
         #endregion
+
         private void buttonClearData_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("are you sure?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
