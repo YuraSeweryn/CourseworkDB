@@ -73,8 +73,6 @@ namespace CourseworkDB
 
             modelBuilder.Entity<AvailabilityLog>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.ToTable("availability_log");
 
                 entity.Property(e => e.Amount).HasColumnName("amount");
@@ -115,8 +113,6 @@ namespace CourseworkDB
             modelBuilder.Entity<Good>(entity =>
             {
                 entity.ToTable("goods");
-
-                //entity.HasIndex(e => e.GoodId, "goods_good_id_idx");
 
                 entity.Property(e => e.GoodId)
                     .HasColumnName("good_id")
@@ -193,8 +189,6 @@ namespace CourseworkDB
 
             modelBuilder.Entity<PricesLog>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.ToTable("prices_log");
 
                 entity.Property(e => e.AvailableId).HasColumnName("available_id");
@@ -233,8 +227,6 @@ namespace CourseworkDB
 
             modelBuilder.Entity<ShopsLog>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.ToTable("shops_log");
 
                 entity.Property(e => e.Adress)
